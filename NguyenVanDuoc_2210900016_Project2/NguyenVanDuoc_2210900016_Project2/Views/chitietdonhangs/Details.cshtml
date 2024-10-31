@@ -1,0 +1,43 @@
+﻿@model NguyenVanDuoc_2210900016_Project2.Models.chitietdonhang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>chitietdonhang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.donhang.MaDon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.donhang.MaDon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sanpham.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sanpham.TenSP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaCTDH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

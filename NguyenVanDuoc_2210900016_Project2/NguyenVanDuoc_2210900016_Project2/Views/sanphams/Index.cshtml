@@ -1,0 +1,46 @@
+﻿@model IEnumerable<NguyenVanDuoc_2210900016_Project2.Models.sanpham>
+
+@{
+    ViewBag.Title = "sanpham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh mục sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaSP }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaSP }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaSP }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Điện Thoại</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Steve Jobs</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm điện thoại..." id="search">
+            <button id="search-btn">Tìm kiếm</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+                <li><a href="login.html">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slider Banner -->
+    <section class="slider">
+        <div class="slides">
+            <div class="slide"><img src="anh/slide1.png" alt="Điện thoại nổi bật"></div>
+            <div class="slide"><img src="anh/slide2.jpg" alt="Giảm giá đặc biệt"></div>
+            <div class="slide"><img src="anh/slide3.jpg" alt="Sản phẩm mới"></div>
+        </div>
+    </section>
+
+    <!-- Danh sách điện thoại -->
+    <section class="products">
+        <h2>Điện Thoại Nổi Bật</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="anh/2022_11_30_638054091427671235_ip-14-trang-1.jpg" alt="iPhone 14">
+                <h3>iPhone 14</h3>
+                <p>Giá: 24,000,000 VND</p>
+                <button onclick="window.location.href='chitietsanpham.html?id=1'">Xem chi tiết</button>
+            </div>
+
+            <div class="product-item">
+                <img src="anh/galaxy-s23-highlights-exclusive-kv.avif" alt="Samsung Galaxy S23">
+                <h3>Samsung Galaxy S23</h3>
+                <p>Giá: 22,000,000 VND</p>
+                <button onclick="window.location.href='chitietsanpham.html?id=2'">Xem chi tiết</button>
+            </div>
+
+            <div class="product-item">
+                <img src="anh/xiaomi-13-pro-thumb-1-2-600x600.jpg" alt="Xiaomi Mi 13">
+                <h3>Xiaomi Mi 13</h3>
+                <p>Giá: 15,000,000 VND</p>
+                <button onclick="window.location.href='chitietsanpham.html?id=3'">Xem chi tiết</button>
+            </div>
+
+            <div class="product-item">
+                <img src="anh/oppo-reno8t-4g-den1-thumb-600x600.jpg" alt="Oppo Reno 8">
+                <h3>Oppo Reno 8</h3>
+                <p>Giá: 12,000,000 VND</p>
+                <button onclick="window.location.href='chitietsanpham.html?id=4'">Xem chi tiết</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Khuyến mãi -->
+    <section class="products">
+        <h2>Khuyến Mãi Hot</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="anh/iphone-13-midnight-1-600x600.jpg" alt="iPhone 13">
+                <h3>iPhone 13 - Giảm 15%</h3>
+                <p>Giá cũ: 20,000,000 VND</p>
+                <p>Giá mới: 17,000,000 VND</p>
+            </div>
+
+            <div class="product-item">
+                <img src="anh/Samsung-Galaxy-A53-cam-thumb-600x600.jpg" alt="Samsung Galaxy A53">
+                <h3>Samsung Galaxy A53 - Giảm 10%</h3>
+                <p>Giá cũ: 10,000,000 VND</p>
+                <p>Giá mới: 9,000,000 VND</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shop Điện Thoại. All rights reserved.</p>
+        <div class="contact">
+            <p>Liên hệ với chúng tôi qua:</p>
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a> |
+            <a href="mailto:nguyenvanduoc442@gmail.com">
+                <i class="fas fa-envelope"></i> Gmail
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

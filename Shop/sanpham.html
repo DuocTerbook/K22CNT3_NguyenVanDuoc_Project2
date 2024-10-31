@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Steve Job</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Danh sách sản phẩm -->
+    <section class="products">
+        <h2>Tất Cả Sản Phẩm</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="anh/2022_11_30_638054091427671235_ip-14-trang-1.jpg" alt="iPhone 14">
+                <h3>iPhone 14</h3>
+                <p>Giá: 24,000,000 VND</p>
+                <button onclick="window.location.href='chitietsanpham.html?id=1'">Xem chi tiết</button>
+                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product-item">
+                <img src="anh/galaxy-s23-highlights-exclusive-kv.avif" alt="Samsung Galaxy S23">
+                <h3>Samsung Galaxy S23</h3>
+                <p>Giá: 22,000,000 VND</p>
+                <button onclick="window.location.href='chitietsanpham.html?id=2'">Xem chi tiết</button>
+                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product-item">
+                <img src="anh/xiaomi-13-pro-thumb-1-2-600x600.jpg" alt="Xiaomi Mi 13">
+                <h3>Xiaomi Mi 13</h3>
+                <p>Giá: 15,000,000 VND</p>
+                <button onclick="window.location.href='chitietsanpham.html?id=3'">Xem chi tiết</button>
+                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+            </div>
+
+            <div class="product-item">
+                <img src="anh/oppo-reno8t-4g-den1-thumb-600x600.jpg" alt="Oppo Reno 8">
+                <h3>Oppo Reno 8</h3>
+                <p>Giá: 12,000,000 VND</p>
+                <button onclick="window.location.href='chitietsanpham.html?id=4'">Xem chi tiết</button>
+                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+            </div>
+            
+            <!-- Thêm các sản phẩm khác ở đây -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shop Điện Thoại. All rights reserved.</p>
+        <div class="contact">
+            <p>Liên hệ với chúng tôi qua:</p>
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a> |
+            <a href="mailto:nguyenvanduoc442@gmail.com">
+                <i class="fas fa-envelope"></i> Gmail
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

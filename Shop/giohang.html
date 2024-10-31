@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Steve Jobs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Phần Giỏ Hàng -->
+    <section class="cart">
+        <h2>Giỏ Hàng Của Bạn</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Giá</th>
+                    <th>Số Lượng</th>
+                    <th>Tổng</th>
+                    <th>Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+            </tbody>
+        </table>
+        <div class="total">
+            <h3 id="total-price">Tổng giá: 0 VND</h3>
+        </div>
+        <button class="checkout-btn">Tiến Hành Thanh Toán</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shop Điện Thoại. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Lấy giỏ hàng từ localStorage và hiển thị
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemsContainer = document.getElementById('cart-items');
+        let totalPrice = 0;
+
+        cart.forEach(item => {
+            const totalItemPrice = item.price * item.quantity;
+            totalPrice += totalItemPrice;
+            cartItemsContainer.innerHTML += `
+                <tr>
+                    <td>${item.name}</td>
+                    <td>${item.price.toLocaleString()} VND</td>
+                    <td><input type="number" value="${item.quantity}" min="1"></td>
+                    <td>${totalItemPrice.toLocaleString()} VND</td>
+                    <td><button>Xóa</button></td>
+                </tr>
+            `;
+        });
+
+        document.getElementById('total-price').innerText = `Tổng giá: ${totalPrice.toLocaleString()} VND`;
+    </script>
+</body>
+</html>

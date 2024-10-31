@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Steve Jobs</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+                <li><a href="login.html">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-detail">
+        <div class="container">
+            <div class="image-wrapper">
+                <img id="product-image" src="" alt="Product Image">
+            </div>
+            <div class="details">
+                <h2 id="product-name">Tên Sản Phẩm</h2>
+                <p><strong>Giá:</strong> <span id="product-price"></span></p>
+                <p><strong>Thông số kỹ thuật:</strong></p>
+                <ul id="product-specs"></ul>
+                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Shop Điện Thoại. All rights reserved.</p>
+        <div class="contact">
+            <p>Liên hệ với chúng tôi qua:</p>
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a> |
+            <a href="mailto:nguyenvanduoc442@gmail.com">
+                <i class="fas fa-envelope"></i> Gmail
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Danh sách các sản phẩm
+        const products = [
+            {
+                id: 1,
+                name: "iPhone 14",
+                price: "24,000,000 VND",
+                image: "anh/dienthoai/iphone14.jpg",
+                specs: [
+                    "Màn hình: OLED, 6.1 inch",
+                    "Chip: A15 Bionic",
+                    "RAM: 6GB",
+                    "Bộ nhớ: 128GB",
+                    "Camera: Chính 12MP, Phụ 12MP",
+                    "Pin: 3095 mAh"
+                ]
+            },
+            {
+                id: 2,
+                name: "Samsung Galaxy S23",
+                price: "22,000,000 VND",
+                image: "anh/galaxy-s23-highlights-exclusive-kv.avif",
+                specs: [
+                    "Màn hình: Dynamic AMOLED, 6.1 inch",
+                    "Chip: Snapdragon 8 Gen 2",
+                    "RAM: 8GB",
+                    "Bộ nhớ: 128GB",
+                    "Camera: Chính 50MP, Phụ 10MP & 12MP",
+                    "Pin: 3900 mAh"
+                ]
+            },
+            {
+                id: 3,
+                name: "Xiaomi Mi 13",
+                price: "18,000,000 VND",
+                image: "anh/dienthoai/xiaomi-mi-13.jpg",
+                specs: [
+                    "Màn hình: OLED, 6.3 inch",
+                    "Chip: Snapdragon 8 Gen 2",
+                    "RAM: 12GB",
+                    "Bộ nhớ: 256GB",
+                    "Camera: Chính 50MP, Phụ 13MP & 10MP",
+                    "Pin: 4500 mAh"
+                ]
+            },
+            {
+                id: 4,
+                name: "Oppo Reno 8",
+                price: "10,000,000 VND",
+                image: "anh/dienthoai/oppo-reno-8.jpg",
+                specs: [
+                    "Màn hình: AMOLED, 6.4 inch",
+                    "Chip: MediaTek Dimensity 1300",
+                    "RAM: 8GB",
+                    "Bộ nhớ: 256GB",
+                    "Camera: Chính 50MP, Phụ 8MP & 2MP",
+                    "Pin: 4500 mAh"
+                ]
+            }
+        ];
+
+        // Lấy ID từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+
+        // Tìm sản phẩm theo ID
+        const product = products.find(p => p.id === productId);
+
+        if (product) {
+            // Hiển thị thông tin sản phẩm
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-price').textContent = product.price;
+            document.getElementById('product-image').src = product.image;
+
+            // Thêm thông số kỹ thuật vào danh sách
+            const specsList = document.getElementById('product-specs');
+            product.specs.forEach(spec => {
+                const li = document.createElement('li');
+                li.textContent = spec;
+                specsList.appendChild(li);
+            });
+        }
+
+        function addToCart() {
+            alert("Đã thêm sản phẩm vào giỏ hàng!");
+        }
+    </script>
+</body>
+
+</html>
