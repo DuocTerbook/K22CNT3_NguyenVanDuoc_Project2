@@ -13,6 +13,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.MaDon)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.NgayDatHang)
         </th>
         <th>
@@ -30,6 +33,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.MaDon)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.NgayDatHang)
         </td>
         <td>
@@ -42,9 +48,9 @@
             @Html.DisplayFor(modelItem => item.khachhang.HoTen)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaDon }, new { @class = "btn btn-success" }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaDon }, new { @class = "btn btn-info" }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaDon }, new { @class = "btn btn-danger" })
+            @Html.ActionLink("Edit", "Edit", new { id = item.MaDon }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MaDon }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MaDon }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
