@@ -54,6 +54,23 @@
 
     <script>
         // Lấy giỏ hàng từ localStorage và hiển thị
+        // const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        // const cartItemsContainer = document.getElementById('cart-items');
+        // let totalPrice = 0;
+
+        // cart.forEach(item => {
+        //     const totalItemPrice = item.price * item.quantity;
+        //     totalPrice += totalItemPrice;
+        //     cartItemsContainer.innerHTML += `
+        //         <tr>
+        //             <td>${item.name}</td>
+        //             <td>${item.price.toLocaleString()} VND</td>
+        //             <td><input type="number" value="${item.quantity}" min="1"></td>
+        //             <td>${totalItemPrice.toLocaleString()} VND</td>
+        //             <td><button>Xóa</button></td>
+        //         </tr>
+        //     `;
+        // });
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const cartItemsContainer = document.getElementById('cart-items');
         let totalPrice = 0;
@@ -64,9 +81,9 @@
             cartItemsContainer.innerHTML += `
                 <tr>
                     <td>${item.name}</td>
-                    <td>${item.price.toLocaleString()} VND</td>
+                    <td>${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.price)} VND</td>
                     <td><input type="number" value="${item.quantity}" min="1"></td>
-                    <td>${totalItemPrice.toLocaleString()} VND</td>
+                    <td>${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(totalItemPrice)} VND</td>
                     <td><button>Xóa</button></td>
                 </tr>
             `;

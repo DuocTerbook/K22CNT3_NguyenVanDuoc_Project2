@@ -33,7 +33,7 @@
                 <h3>iPhone 14</h3>
                 <p>Giá: 24,000,000 VND</p>
                 <button onclick="window.location.href='chitietsanpham.html?id=1'">Xem chi tiết</button>
-                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                <button onclick="addToCart('SP01')">Thêm vào giỏ hàng</button>
             </div>
 
             <div class="product-item">
@@ -41,7 +41,7 @@
                 <h3>Samsung Galaxy S23</h3>
                 <p>Giá: 22,000,000 VND</p>
                 <button onclick="window.location.href='chitietsanpham.html?id=2'">Xem chi tiết</button>
-                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                <button onclick="addToCart('SP02')">Thêm vào giỏ hàng</button>
             </div>
 
             <div class="product-item">
@@ -49,7 +49,7 @@
                 <h3>Xiaomi Mi 13</h3>
                 <p>Giá: 15,000,000 VND</p>
                 <button onclick="window.location.href='chitietsanpham.html?id=3'">Xem chi tiết</button>
-                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                <button onclick="addToCart('SP03')">Thêm vào giỏ hàng</button>
             </div>
 
             <div class="product-item">
@@ -57,7 +57,7 @@
                 <h3>Oppo Reno 8</h3>
                 <p>Giá: 12,000,000 VND</p>
                 <button onclick="window.location.href='chitietsanpham.html?id=4'">Xem chi tiết</button>
-                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                <button onclick="addToCart('SP04')">Thêm vào giỏ hàng</button>
             </div>
 
             <div class="product-item">
@@ -65,7 +65,7 @@
                 <h3>iPhone 16 Pro</h3>
                 <p>Giá: 28,000,000 VND</p>
                 <button onclick="window.location.href='chitietsanpham.html?id=5'">Xem chi tiết</button>
-                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                <button onclick="addToCart('SP05')">Thêm vào giỏ hàng</button>
             </div>
             
             <div class="product-item">
@@ -73,7 +73,7 @@
                 <h3>Xiaomi 14T Pro 5G</h3>
                 <p>Giá: 16,000,000 VND</p>
                 <button onclick="window.location.href='chitietsanpham.html?id=6'">Xem chi tiết</button>
-                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                <button onclick="addToCart('SP06')">Thêm vào giỏ hàng</button>
             </div>
             
             <div class="product-item">
@@ -81,7 +81,7 @@
                 <h3>realme C65s</h3>
                 <p>Giá: 6,500,000 VND</p>
                 <button onclick="window.location.href='chitietsanpham.html?id=7'">Xem chi tiết</button>
-                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                <button onclick="addToCart('SP07')">Thêm vào giỏ hàng</button>
             </div>
             
             <div class="product-item">
@@ -89,7 +89,7 @@
                 <h3>iPhone 15 Pro</h3>
                 <p>Giá: 26,000,000 VND</p>
                 <button onclick="window.location.href='chitietsanpham.html?id=8'">Xem chi tiết</button>
-                <button onclick="addToCart()">Thêm vào giỏ hàng</button>
+                <button onclick="addToCart('SP08')">Thêm vào giỏ hàng</button>
             </div>
         </div>
     </section>
@@ -107,6 +107,106 @@
             </a>
         </div>
     </footer>
+    <script type='text/javascript'>
+        // Danh sách sản phẩm mẫu
+        var products = [
+        {
+                id: 'SP01',
+                name: 'iPhone 14',
+                price: 24000000,
+                img: '',
+            },
+            {
+                id: 'SP02',
+                name: 'Samsung Galaxy S23',
+                price: 22000000,
+                img: '',
+            },
+            {
+                id: 'SP03',
+                name: 'Xiaomi 14T Pro 5G',
+                price: 15000000,
+                img: '',
+            },
+            {
+                id: 'SP04',
+                name: 'Oppo Reno 8',
+                price: 12000000,
+                img: '',
+            },
+            {
+                id: 'SP05',
+                name: 'iPhone 16 Pro',
+                price: 28000000,
+                img: '',
+            },
+            {
+                id: 'SP06',
+                name: 'Xiaomi 14T Pro 5G',
+                price: 1600000,
+                img: '',
+            },
+            {
+                id: 'SP07',
+                name: 'realme C65s',
+                price: 6500000,
+                img: '',
+            },
+            {
+                id: 'SP08',
+                name: 'iPhone 15 Pro',
+                price: 26000000,
+                img: '',
+            },
+        ];
+    
+        // Lưu danh sách sản phẩm vào localStorage
+        localStorage.setItem('listProduct', JSON.stringify(products));
+    
+        // Hàm thêm sản phẩm vào giỏ hàng
+        function addToCart(id) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const listPro = JSON.parse(localStorage.getItem('listProduct')) || [];
+            
+            // Tìm sản phẩm theo id
+            const product = listPro.find(item => item.id === id);
+            if (!product) {
+                alert("Sản phẩm không tồn tại!");
+                return;
+            }
+    
+            const productIndex = cart.findIndex(item => item.id === id);
+            
+            if (productIndex >= 0) {
+                cart[productIndex].quantity += 1;
+            } else {
+                cart.push({ id: id, name: product.name, price: product.price, quantity: 1 });
+            }
+    
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${product.name} đã được thêm vào giỏ hàng!`);
+            updateCartDisplay();
+        }
+    
+        // Hàm hiển thị giỏ hàng
+        function updateCartDisplay() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.getElementById("cart-display");
+            cartContainer.innerHTML = ""; // Xóa nội dung cũ
+    
+            cart.forEach(item => {
+                const cartItem = document.createElement("div");
+                cartItem.classList.add("cart-item");
+                cartItem.textContent = `${item.name} - ${item.quantity} x ${item.price} VND`;
+                cartContainer.appendChild(cartItem);
+            });
+    
+            const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById("cart-count").textContent = `(${totalQuantity})`;
+        }
+    </script>
+    
+    
     <script src="script.js"></script>
 </body>
 </html>
