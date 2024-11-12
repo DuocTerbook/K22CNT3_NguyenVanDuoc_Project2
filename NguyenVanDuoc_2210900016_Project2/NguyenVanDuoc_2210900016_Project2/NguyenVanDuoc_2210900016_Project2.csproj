@@ -133,9 +133,25 @@
     <Compile Include="Controllers\donhangsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\khachhangsController.cs" />
+    <Compile Include="Controllers\NvdAccountsController.cs" />
     <Compile Include="Controllers\sanphamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account_NVD_2210900016.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account_NVD_2210900016.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account_NVD_2210900016.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account_NVD_2210900016.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account_NVD_2210900016.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account_NVD_2210900016.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\chitietdonhang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -160,6 +176,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NvdAccount.cs">
+      <DependentUpon>Account_NVD_2210900016.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\QUAN_TRI.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -192,6 +211,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Account_NVD_2210900016.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Account_NVD_2210900016.edmx</DependentUpon>
+      <LastGenOutput>Account_NVD_2210900016.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Account_NVD_2210900016.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Account_NVD_2210900016.edmx</DependentUpon>
+      <LastGenOutput>Account_NVD_2210900016.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -214,6 +243,13 @@
     </EntityDeploy>
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Account_NVD_2210900016.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Account_NVD_2210900016.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Account_NVD_2210900016.edmx.diagram">
+      <DependentUpon>Account_NVD_2210900016.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
@@ -260,6 +296,13 @@
     <Content Include="Views\chitietdonhangs\Details.cshtml" />
     <Content Include="Views\chitietdonhangs\Edit.cshtml" />
     <Content Include="Views\chitietdonhangs\Index.cshtml" />
+    <Content Include="Views\NvdAccounts\Create.cshtml" />
+    <Content Include="Views\NvdAccounts\Delete.cshtml" />
+    <Content Include="Views\NvdAccounts\Details.cshtml" />
+    <Content Include="Views\NvdAccounts\Edit.cshtml" />
+    <Content Include="Views\NvdAccounts\Index.cshtml" />
+    <Content Include="Views\NvdAccounts\Login.cshtml" />
+    <Content Include="Views\NvdAccounts\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

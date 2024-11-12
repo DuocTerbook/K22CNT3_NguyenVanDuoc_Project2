@@ -1,0 +1,51 @@
+﻿@model NguyenVanDuoc_2210900016_Project2.Models.NvdAccount
+
+@{
+    ViewBag.Title = "Đăng ký tài khoản";
+}
+
+<h2>Đăng ký tài khoản</h2>
+
+@using (Html.BeginForm("Register", "NvdAccounts", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NvdUserName)
+        @Html.TextBoxFor(model => model.NvdUserName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.NvdUserName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NvdPassWord)
+        @Html.PasswordFor(model => model.NvdPassWord, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.NvdPassWord, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NvdFullName)
+        @Html.TextBoxFor(model => model.NvdFullName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.NvdFullName, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NvdEmail)
+        @Html.TextBoxFor(model => model.NvdEmail, new { @class = "form-control", type = "email" })
+        @Html.ValidationMessageFor(model => model.NvdEmail, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NvdPhone)
+        @Html.TextBoxFor(model => model.NvdPhone, new { @class = "form-control", type = "tel" })
+        @Html.ValidationMessageFor(model => model.NvdPhone, "", new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-primary">Đăng ký</button>
+}
+
+<div>
+    <p>Đã có tài khoản? <a href="@Url.Action("Login", "NvdAccounts")">Đăng nhập tại đây</a>.</p>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

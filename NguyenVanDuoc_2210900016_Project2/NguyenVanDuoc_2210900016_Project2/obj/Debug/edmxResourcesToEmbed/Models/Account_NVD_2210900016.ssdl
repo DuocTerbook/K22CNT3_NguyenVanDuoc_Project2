@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="K22CNT3_lession10Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="NvdAccount">
+    <Key>
+      <PropertyRef Name="NvdID" />
+    </Key>
+    <Property Name="NvdID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NvdUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvdPassWord" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvdFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvdEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvdPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="NvdActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="K22CNT3_lession10ModelStoreContainer">
+    <EntitySet Name="NvdAccount" EntityType="Self.NvdAccount" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

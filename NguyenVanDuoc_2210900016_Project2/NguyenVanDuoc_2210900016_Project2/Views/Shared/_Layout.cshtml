@@ -26,8 +26,8 @@
                     <li>@Html.ActionLink("Chi tiết đơn hàng", "Index", "chitietdonhangs", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
                 <div>
-                    <a href="#" class="btn btn-primary mx-1">Đăng ký</a>
-                    <a href="#" class="btn btn-success">Đăng nhập</a>
+                    @Html.ActionLink("Đăng ký", "Register", "NvdAccounts", new { area = "" }, new { @class = "btn btn-primary mx-1" })
+                    @Html.ActionLink("Đăng nhập", "Login", "NvdAccounts", new { area = "" }, new { @class = "btn btn-success" })
                 </div>
             </div>
         </div>

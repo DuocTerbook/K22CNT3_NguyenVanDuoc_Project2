@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="K22CNT3_lession10ModelStoreContainer" CdmEntityContainer="AccountEntities">
+    <EntitySetMapping Name="NvdAccounts">
+      <EntityTypeMapping TypeName="K22CNT3_lession10Model.NvdAccount">
+        <MappingFragment StoreEntitySet="NvdAccount">
+          <ScalarProperty Name="NvdID" ColumnName="NvdID" />
+          <ScalarProperty Name="NvdUserName" ColumnName="NvdUserName" />
+          <ScalarProperty Name="NvdPassWord" ColumnName="NvdPassWord" />
+          <ScalarProperty Name="NvdFullName" ColumnName="NvdFullName" />
+          <ScalarProperty Name="NvdEmail" ColumnName="NvdEmail" />
+          <ScalarProperty Name="NvdPhone" ColumnName="NvdPhone" />
+          <ScalarProperty Name="NvdActive" ColumnName="NvdActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
