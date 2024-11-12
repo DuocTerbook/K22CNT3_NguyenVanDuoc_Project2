@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\K22CNT3_NguyenVanDuoc_2210900016_Project2\NguyenVanDuoc_2210900016_Project2\NguyenVanDuoc_2210900016_Project2\Models\Account_NVD_2210900016.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\K22CNT3_NguyenVanDuoc_2210900016_Project2\NguyenVanDuoc_2210900016_Project2\NguyenVanDuoc_2210900016_Project2\Models\Account_NguyenVanDuoc_Project2.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

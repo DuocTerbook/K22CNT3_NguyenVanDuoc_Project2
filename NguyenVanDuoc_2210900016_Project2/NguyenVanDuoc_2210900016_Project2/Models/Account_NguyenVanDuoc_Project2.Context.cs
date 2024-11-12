@@ -13,10 +13,10 @@ namespace NguyenVanDuoc_2210900016_Project2.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AccountEntities : DbContext
+    public partial class Account_NguyenVanDuoc_Project2Entities : DbContext
     {
-        public AccountEntities()
-            : base("name=AccountEntities")
+        public Account_NguyenVanDuoc_Project2Entities()
+            : base("name=Account_NguyenVanDuoc_Project2Entities")
         {
         }
     
@@ -25,6 +25,6 @@ namespace NguyenVanDuoc_2210900016_Project2.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<NvdAccount> NvdAccounts { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
     }
 }

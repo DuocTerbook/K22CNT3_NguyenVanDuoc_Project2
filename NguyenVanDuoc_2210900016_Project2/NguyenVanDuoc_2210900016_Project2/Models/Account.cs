@@ -13,21 +13,21 @@ namespace NguyenVanDuoc_2210900016_Project2.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public partial class NvdAccount
+    public partial class Account
     {
         [Display(Name ="ID")]
-        public int NvdID { get; set; }
-        [Display(Name ="Tài khoản")]
-        public string NvdUserName { get; set; }
+        public int ID { get; set; }
+        [Display(Name = "Tài khoản")]
+        public string UserName { get; set; }
         [Display(Name = "Mật khẩu")]
-        public string NvdPassWord { get; set; }
+        public string PassWord { get; set; }
         [Display(Name = "Họ và tên")]
-        public string NvdFullName { get; set; }
+        public string FullName { get; set; }
         [Display(Name = "Email")]
-        public string NvdEmail { get; set; }
+        public string Email { get; set; }
         [Display(Name = "Số điện thoại")]
-        public string NvdPhone { get; set; }
+        public string Phone { get; set; }
         [Display(Name = "Active")]
-        public Nullable<bool> NvdActive { get; set; }
+        public Nullable<bool> Active { get; set; }
     }
 }
