@@ -33,6 +33,14 @@
           <Property Name="SDT" Type="nvarchar" MaxLength="20" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="225" />
         </EntityType>
+        <EntityType Name="QUAN_TRI">
+          <Key>
+            <PropertyRef Name="Tai_khoan" />
+          </Key>
+          <Property Name="Tai_khoan" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mat_khau" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="Trang_thai" Type="tinyint" Nullable="false" />
+        </EntityType>
         <EntityType Name="sanpham">
           <Key>
             <PropertyRef Name="MaSP" />
@@ -92,6 +100,7 @@
           <EntitySet Name="chitietdonhang" EntityType="Self.chitietdonhang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="donhang" EntityType="Self.donhang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="khachhang" EntityType="Self.khachhang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QUAN_TRI" EntityType="Self.QUAN_TRI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sanpham" EntityType="Self.sanpham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_donhang_chitietdonhang" Association="Self.FK_donhang_chitietdonhang">
@@ -144,6 +153,14 @@
           <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="DiaChi" Type="String" MaxLength="225" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="donhangs" Relationship="Self.FK_khachhang_donhang" FromRole="khachhang" ToRole="donhang" />
+        </EntityType>
+        <EntityType Name="QUAN_TRI">
+          <Key>
+            <PropertyRef Name="Tai_khoan" />
+          </Key>
+          <Property Name="Tai_khoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mat_khau" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Trang_thai" Type="Byte" Nullable="false" />
         </EntityType>
         <EntityType Name="sanpham">
           <Key>
@@ -205,6 +222,7 @@
           <EntitySet Name="chitietdonhangs" EntityType="Self.chitietdonhang" />
           <EntitySet Name="donhangs" EntityType="Self.donhang" />
           <EntitySet Name="khachhangs" EntityType="Self.khachhang" />
+          <EntitySet Name="QUAN_TRI" EntityType="Self.QUAN_TRI" />
           <EntitySet Name="sanphams" EntityType="Self.sanpham" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <AssociationSet Name="FK_donhang_chitietdonhang" Association="Self.FK_donhang_chitietdonhang">
@@ -254,6 +272,15 @@
                 <ScalarProperty Name="HoTen" ColumnName="HoTen" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QUAN_TRI">
+            <EntityTypeMapping TypeName="NguyenVanDuoc_2210900016_Project2Model.QUAN_TRI">
+              <MappingFragment StoreEntitySet="QUAN_TRI">
+                <ScalarProperty Name="Tai_khoan" ColumnName="Tai_khoan" />
+                <ScalarProperty Name="Mat_khau" ColumnName="Mat_khau" />
+                <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

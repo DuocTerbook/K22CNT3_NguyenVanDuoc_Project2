@@ -1,11 +1,10 @@
 ﻿@model NguyenVanDuoc_2210900016_Project2.Models.sanpham
 
 @{
-    ViewBag.Title = "Cap nhat";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Cập nhật sản phẩm";
 }
 
-<h2>Cập nhật</h2>
+<h2>Cập nhật sản phẩm</h2>
 
 <div>
     <h4>sanpham</h4>
@@ -38,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+    @Html.ActionLink("Cập nhật", "Edit", new { id = Model.MaSP }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

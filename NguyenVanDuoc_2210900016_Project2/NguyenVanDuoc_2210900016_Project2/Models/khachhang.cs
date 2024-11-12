@@ -20,9 +20,9 @@ namespace NguyenVanDuoc_2210900016_Project2.Models
         {
             this.donhangs = new HashSet<donhang>();
         }
-        [Display(Name ="Mã Khách hàng")]
+        [Display(Name ="Mã khách hàng")]
         public int MaKhach { get; set; }
-        [Display(Name = "Tên Khách hàng")]
+        [Display(Name = "Tên khách hàng ")]
         public string HoTen { get; set; }
         [Display(Name = "Số điện thoại")]
         public string SDT { get; set; }

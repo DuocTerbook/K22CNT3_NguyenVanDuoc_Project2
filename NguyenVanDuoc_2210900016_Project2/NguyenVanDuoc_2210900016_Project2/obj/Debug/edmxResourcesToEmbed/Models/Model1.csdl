@@ -33,6 +33,14 @@
     <Property Name="DiaChi" Type="String" MaxLength="225" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="donhangs" Relationship="Self.FK_khachhang_donhang" FromRole="khachhang" ToRole="donhang" />
   </EntityType>
+  <EntityType Name="QUAN_TRI">
+    <Key>
+      <PropertyRef Name="Tai_khoan" />
+    </Key>
+    <Property Name="Tai_khoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mat_khau" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Trang_thai" Type="Byte" Nullable="false" />
+  </EntityType>
   <EntityType Name="sanpham">
     <Key>
       <PropertyRef Name="MaSP" />
@@ -93,6 +101,7 @@
     <EntitySet Name="chitietdonhangs" EntityType="Self.chitietdonhang" />
     <EntitySet Name="donhangs" EntityType="Self.donhang" />
     <EntitySet Name="khachhangs" EntityType="Self.khachhang" />
+    <EntitySet Name="QUAN_TRI" EntityType="Self.QUAN_TRI" />
     <EntitySet Name="sanphams" EntityType="Self.sanpham" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <AssociationSet Name="FK_donhang_chitietdonhang" Association="Self.FK_donhang_chitietdonhang">

@@ -21,7 +21,6 @@ namespace NguyenVanDuoc_2210900016_Project2.Models
             this.chitietdonhangs = new HashSet<chitietdonhang>();
         }
         [Display(Name ="Mã sản phẩm")]
-
         public int MaSP { get; set; }
         [Display(Name = "Tên sản phẩm")]
         public string TenSP { get; set; }

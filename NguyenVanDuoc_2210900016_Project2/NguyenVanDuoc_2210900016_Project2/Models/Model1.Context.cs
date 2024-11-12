@@ -28,6 +28,7 @@ namespace NguyenVanDuoc_2210900016_Project2.Models
         public virtual DbSet<chitietdonhang> chitietdonhangs { get; set; }
         public virtual DbSet<donhang> donhangs { get; set; }
         public virtual DbSet<khachhang> khachhangs { get; set; }
+        public virtual DbSet<QUAN_TRI> QUAN_TRI { get; set; }
         public virtual DbSet<sanpham> sanphams { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }

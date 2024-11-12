@@ -13,18 +13,13 @@ namespace NguyenVanDuoc_2210900016_Project2.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
-    public partial class chitietdonhang
+    public partial class QUAN_TRI
     {
-        [Display(Name ="Mã chi tiết đơn hàng")]
-        public int MaCTDH { get; set; }
-        [Display(Name ="Mã đơn hàng")]
-        public Nullable<int> MaDon { get; set; }
-        [Display(Name = "Mã sản phẩm")]
-        public Nullable<int> MaSP { get; set; }
-        [Display(Name = "Số lượng")]
-        public Nullable<int> SoLuong { get; set; }
-    
-        public virtual donhang donhang { get; set; }
-        public virtual sanpham sanpham { get; set; }
+        [Display(Name ="Tài khoản")]
+        public string Tai_khoan { get; set; }
+        [Display(Name = "Mật khẩu")]
+        public string Mat_khau { get; set; }
+        [Display(Name = "Trạng thái")]
+        public byte Trang_thai { get; set; }
     }
 }

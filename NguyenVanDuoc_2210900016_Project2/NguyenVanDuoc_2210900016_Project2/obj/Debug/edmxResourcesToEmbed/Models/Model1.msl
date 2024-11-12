@@ -32,6 +32,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="QUAN_TRI">
+      <EntityTypeMapping TypeName="NguyenVanDuoc_2210900016_Project2Model.QUAN_TRI">
+        <MappingFragment StoreEntitySet="QUAN_TRI">
+          <ScalarProperty Name="Tai_khoan" ColumnName="Tai_khoan" />
+          <ScalarProperty Name="Mat_khau" ColumnName="Mat_khau" />
+          <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="sanphams">
       <EntityTypeMapping TypeName="NguyenVanDuoc_2210900016_Project2Model.sanpham">
         <MappingFragment StoreEntitySet="sanpham">

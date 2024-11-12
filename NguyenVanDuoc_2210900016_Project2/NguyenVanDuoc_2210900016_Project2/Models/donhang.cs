@@ -21,9 +21,8 @@ namespace NguyenVanDuoc_2210900016_Project2.Models
             this.chitietdonhangs = new HashSet<chitietdonhang>();
         }
         [Display(Name ="Mã đơn hàng")]
-    
         public int MaDon { get; set; }
-        [Display(Name = "Mã Khách")]
+        [Display(Name = "Mã khách hàng")]
         public Nullable<int> Makhach { get; set; }
         [Display(Name = "Ngày đặt hàng")]
         public Nullable<System.DateTime> NgayDatHang { get; set; }
