@@ -136,7 +136,7 @@ namespace NguyenVanDuoc_2210900016_Project2.Controllers
             if (Check != null)
             {
                 // Lưu session
-                Session["NvdAccount"] = Check;
+                Session["Account"] = Check;
                 return Redirect("/");
             }
             return View(Account);

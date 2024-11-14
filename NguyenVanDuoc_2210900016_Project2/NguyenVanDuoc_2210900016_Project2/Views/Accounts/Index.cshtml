@@ -1,16 +1,19 @@
 ﻿@model IEnumerable<NguyenVanDuoc_2210900016_Project2.Models.Account>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Admin";
 }
 
-<h2>Index</h2>
+<h2>Admin</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.UserName)
         </th>
@@ -35,6 +38,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.UserName)
         </td>
         <td>
@@ -53,9 +59,9 @@
             @Html.DisplayFor(modelItem => item.Active)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Sửa", "Edit", new { id = item.ID }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Cập nhật", "Details", new { id = item.ID }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
